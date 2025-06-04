@@ -8,8 +8,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version> <!-- Use latest compatible version -->
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>3.2.7</version> 
+        <relativePath/> 
     </parent>
 
     <groupId>com.social</groupId>
@@ -36,7 +36,7 @@
     </dependencyManagement>
 
     <dependencies>
-        <!-- Spring Boot Starters (NO version needed) -->
+        <!-- Spring Boot Starters with explicit version -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -92,7 +92,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.2.5</version>
+                <version>3.2.7</version> <!-- Corrected version tag -->
             </plugin>
         </plugins>
     </build>
@@ -103,4 +103,5 @@
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
+
 </project>
