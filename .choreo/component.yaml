@@ -1,0 +1,7 @@
+endpoints:
+  - name: public-api
+    port: 9090 
+    type: REST
+    networkVisibility: Public
+    context: /
+    method: ANY
