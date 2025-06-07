@@ -73,5 +73,26 @@ public class loginbean {
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
 	} 
-		
+	//
+	private String empname;
+	private String userId;
+	public String getEmpname() {
+		return empname;
+	}
+	public void setEmpname(String empname) {
+		this.empname = empname;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	private boolean sucess;
+	public boolean isSucess() {
+		return sucess;
+	}
+	public void setSucess(boolean sucess) {
+		this.sucess = sucess;
+	}
 }

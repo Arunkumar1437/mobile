@@ -15,4 +15,10 @@ public class loginserviceImpl implements loginservice{
 		return logindao.findByUsername(been);
 	}
 
+	@Override
+	public loginbean checkin(String userid) {
+		// TODO Auto-generated method stub
+		return logindao.checkin(userid);
+	}
+
 }

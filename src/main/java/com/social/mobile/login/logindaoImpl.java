@@ -3,6 +3,7 @@ package com.social.mobile.login;
 import java.net.InetAddress;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -44,6 +45,23 @@ public class logindaoImpl implements logindao{
     	e.printStackTrace();
     }
 	return result;
+	}
+
+	@Override
+	public loginbean checkin(String userid) {
+		loginbean result=new loginbean();
+		 String attendanceid = jdbcTemplate.queryForObject(loginqueryutil.GET_ATTENDANCE_ID, new Object[] {}, String.class);
+
+		result=jdbcTemplate.queryForObject(loginqueryutil.get_detail,new Object[]{userid},new BeanPropertyRowMapper<loginbean>(loginbean.class));
+		
+	       int row=jdbcTemplate.update(loginqueryutil.SAVE_Attendance, new Object[] {attendanceid,userid,result.getEmpname(),userid});
+	       
+	       if(row > 0) {
+	    	   result.setSucess(true);
+	       }
+	       
+		
+	  return result;
 	}
 
 }

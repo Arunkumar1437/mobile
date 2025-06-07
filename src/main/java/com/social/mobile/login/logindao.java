@@ -4,4 +4,6 @@ public interface logindao {
 
 	loginbean findByUsername(loginbean been);
 
+	loginbean checkin(String userid);
+
 }
