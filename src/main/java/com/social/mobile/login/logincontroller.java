@@ -1,11 +1,13 @@
 package com.social.mobile.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -32,4 +34,9 @@ public class logincontroller {
 			hrmsbean=loginservice.checkin(userid);
 	     return hrmsbean;
 	    }
+	 
+	 @GetMapping("/getAttendanceList")
+		public loginbean getAttendanceList(@RequestParam String luser) {
+		    return loginservice.getAttendanceList(luser);
+		}
 }

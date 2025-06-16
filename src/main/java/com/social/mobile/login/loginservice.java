@@ -6,4 +6,6 @@ public interface loginservice {
 
 	loginbean checkin(String userid);
 
+	loginbean getAttendanceList(String luser);
+
 }

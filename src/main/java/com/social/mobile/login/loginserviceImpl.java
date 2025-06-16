@@ -21,4 +21,10 @@ public class loginserviceImpl implements loginservice{
 		return logindao.checkin(userid);
 	}
 
+	@Override
+	public loginbean getAttendanceList(String luser) {
+		// TODO Auto-generated method stub
+		return logindao.getAttendanceList(luser);
+	}
+
 }

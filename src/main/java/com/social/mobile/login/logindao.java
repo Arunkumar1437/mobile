@@ -6,4 +6,6 @@ public interface logindao {
 
 	loginbean checkin(String userid);
 
+	loginbean getAttendanceList(String luser);
+
 }

@@ -1,5 +1,7 @@
 package com.social.mobile.login;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -95,4 +97,12 @@ public class loginbean {
 	public void setSucess(boolean sucess) {
 		this.sucess = sucess;
 	}
+	
+	public List<loginbean> getGetattendlist() {
+		return getattendlist;
+	}
+	public void setGetattendlist(List<loginbean> getattendlist) {
+		this.getattendlist = getattendlist;
+	}
+	private List<loginbean> getattendlist;
 }

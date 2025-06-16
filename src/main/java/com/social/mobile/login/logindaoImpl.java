@@ -1,6 +1,8 @@
 package com.social.mobile.login;
 
 import java.net.InetAddress;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -62,6 +64,19 @@ public class logindaoImpl implements logindao{
 	       
 		
 	  return result;
+	}
+
+	@Override
+	public loginbean getAttendanceList(String luser) {
+		loginbean result=new loginbean();
+		List<loginbean> getattendlist = new ArrayList<>();
+		if(luser.equals("N001")) {
+		getattendlist=jdbcTemplate.query(loginqueryutil.ATTEND_LIST,new Object[]{},new BeanPropertyRowMapper<loginbean>(loginbean.class));
+		}else {
+			getattendlist=jdbcTemplate.query(loginqueryutil.ATTEND_LIST1,new Object[]{luser},new BeanPropertyRowMapper<loginbean>(loginbean.class));
+		}
+		result.setGetattendlist(getattendlist);
+	 return result;
 	}
 
 }

@@ -13,5 +13,9 @@ public class loginqueryutil {
 	public static final String get_detail="select emp_name as empname,user_id as userId  from emp_table where user_id=?";
 
 	public static final String SAVE_Attendance="insert into attendance_table (attendance_cd ,user_id ,user_name,in_time ,status,created_by,created_dt) values(?,?,?,now(),'IN',?,now())";
+	
+	public static final String ATTEND_LIST1 ="select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userId,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table where user_id=? order by attendance_id desc";
+
+	public static final String ATTEND_LIST="select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userId,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table order by attendance_id desc";
 
 }
