@@ -17,5 +17,17 @@ public class loginqueryutil {
 	public static final String ATTEND_LIST1 ="select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userId,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table where user_id=? order by attendance_id desc";
 
 	public static final String ATTEND_LIST="select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userId,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table order by attendance_id desc";
-
+	
+    public static final String UPDATE_ATTENDANCE="update attendance_table set out_time=now(),time_duration=?,status='OUT' where attendance_cd=?";
+	
+	public static final String GET_IN_TIME = "select in_time::varchar from attendance_table where attendance_cd=? ";
+	
+	public static final String DELETE_ATTENDANCE = "delete from attendance_table where attendance_cd=? ";
+	
+	public static final String EDIT_ATTENDANCE = "select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userId,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table where attendance_cd=?";
+	
+	public static final String GET_ATTEND_COUNT ="select count(attendance_cd) from attendance_table where attendance_cd=?";
+	
+	public static final String UPDATE_ATTEND = " UPDATE attendance_table SET in_time = ?::timestamp, out_time = ?::timestamp, time_duration = ? WHERE attendance_cd = ?";
+	
 }

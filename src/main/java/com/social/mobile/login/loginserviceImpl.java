@@ -27,4 +27,28 @@ public class loginserviceImpl implements loginservice{
 		return logindao.getAttendanceList(luser);
 	}
 
+	@Override
+	public loginbean deleteattendance(String attendanceid) {
+		// TODO Auto-generated method stub
+		return logindao.deleteattendance(attendanceid);
+	}
+
+	@Override
+	public loginbean editattendance(String attendanceid) {
+		// TODO Auto-generated method stub
+		return logindao.editattendance(attendanceid);
+	}
+
+	@Override
+	public loginbean checkout(String attendanceid) {
+		// TODO Auto-generated method stub
+		return logindao.checkout(attendanceid);
+	}
+
+	@Override
+	public loginbean updateattendance(loginbean been) {
+		// TODO Auto-generated method stub
+		return logindao.updateattendance(been);
+	}
+
 }

@@ -8,4 +8,12 @@ public interface loginservice {
 
 	loginbean getAttendanceList(String luser);
 
+	loginbean deleteattendance(String attendanceid);
+
+	loginbean editattendance(String attendanceid);
+
+	loginbean checkout(String attendanceid);
+
+	loginbean updateattendance(loginbean been);
+
 }
