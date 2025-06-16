@@ -24,7 +24,7 @@ public class loginqueryutil {
 	
 	public static final String DELETE_ATTENDANCE = "delete from attendance_table where attendance_cd=? ";
 	
-	public static final String EDIT_ATTENDANCE = "select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userId,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table where attendance_cd=?";
+	public static final String EDIT_ATTENDANCE = "select attendance_id as attendanceid,attendance_cd as attendancecode,user_id as userid,user_name as empname,in_time as intime,out_time as outtime,time_duration as duration,status as status from attendance_table where attendance_cd=?";
 	
 	public static final String GET_ATTEND_COUNT ="select count(attendance_cd) from attendance_table where attendance_cd=?";
 	
