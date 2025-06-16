@@ -105,4 +105,47 @@ public class loginbean {
 		this.getattendlist = getattendlist;
 	}
 	private List<loginbean> getattendlist;
+	
+	private int attendanceid;
+	public int getAttendanceid() {
+		return attendanceid;
+	}
+	public void setAttendanceid(int attendanceid) {
+		this.attendanceid = attendanceid;
+	}
+	public String getAttendancecode() {
+		return attendancecode;
+	}
+	public void setAttendancecode(String attendancecode) {
+		this.attendancecode = attendancecode;
+	}
+	public String getIntime() {
+		return intime;
+	}
+	public void setIntime(String intime) {
+		this.intime = intime;
+	}
+	public String getOuttime() {
+		return outtime;
+	}
+	public void setOuttime(String outtime) {
+		this.outtime = outtime;
+	}
+	public String getDuration() {
+		return duration;
+	}
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	private String attendancecode;
+	private String intime;
+	private String outtime;
+	private String duration;
+	private String status;
 }
