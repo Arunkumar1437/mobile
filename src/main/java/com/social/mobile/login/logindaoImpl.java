@@ -37,6 +37,7 @@ public class logindaoImpl implements logindao{
 	        	System.out.println(passvalid);
 	        	if (passvalid.equals(been.getPassword())) {
 	        		result.setUserid(been.getUserid());
+	        		result.setUsername(username);
 	        		result.setLogged(true);
 	   	             InetAddress localHost = InetAddress.getLocalHost();
 	   	             System.out.println("Local IP Address: " + localHost.getHostAddress());
